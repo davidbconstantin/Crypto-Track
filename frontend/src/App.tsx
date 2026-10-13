@@ -64,7 +64,7 @@ export default function App() {
   return <div className="app-shell">
     <header className="site-header">
       <a className="brand" href="#top"><span className="brand-mark">C</span><span>Crypto<span className="brand-light">Track</span></span></a>
-      <nav className="main-nav"><a className="active" href="#markets">Top 100</a></nav>
+      <nav className="main-nav"><a className="active" href="#markets">Top 100</a><a href="#about">About</a></nav>
       <button className="refresh-button" onClick={() => void loadCoins()} disabled={loading}><span className={loading ? "refresh-icon spinning" : "refresh-icon"}>↻</span>{loading ? "Loading" : "Refresh"}</button>
     </header>
 
@@ -79,7 +79,7 @@ export default function App() {
         <div className="table-panel">
         
           <div className="table-toolbar"><div><h3>Top cryptocurrencies</h3><p>Market data supplied by CoinGecko</p></div>
-G
+
           </div>
           {error && <div className="message-box error-message"><strong>Market data unavailable</strong><span>{error}</span><button onClick={() => void loadCoins()}>Try again</button></div>}
           {loading && coins.length === 0 && !error && <div className="loading-state"><span className="loader" /><strong>Loading cryptocurrency prices</strong><span>Connecting to CoinGecko…</span></div>}
@@ -92,6 +92,21 @@ G
           <div className="table-bottom"><span>Showing {filteredCoins.length} of {coins.length || 100} coins</span><span>Prices in USD · Data may be delayed</span></div>
         </div>
       </section>
+      
+            <section className="about-strip" id="about">
+              <div className="about-icon">↗</div>
+              <div>
+                <h3>Your crypto market, made clearer</h3>
+                <p>
+                  CryptoTrack brings cryptocurrency prices, market trends, and daily
+                  performance together in one simple dashboard, helping you stay
+                  informed and keep track of the market at a glance.
+                </p>
+              </div>
+              <span className="api-credit">
+                Market data provided by <strong>CoinGecko</strong>
+              </span>
+            </section>
 
     </main>
     <footer className="site-footer"><a className="brand footer-brand" href="#top"><span className="brand-mark">C</span><span>Crypto<span className="brand-light">Track</span></span></a><span>Final Year Project</span><span>Prices are for information only, not financial advice.</span></footer>
