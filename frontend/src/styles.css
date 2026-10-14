@@ -112,6 +112,21 @@ button:disabled {
     border-radius:2px;
     background:var(--green)
 }
+.currency-select {
+    appearance:none;
+    border:1px solid rgba(217,240,225,.13);
+    border-radius:9px;
+    padding:10px 8px 10px 10px;
+    color:#dce9e0;
+    background:#0d1511;
+    font-size:12px;
+    font-weight:700;
+    cursor:pointer
+}
+.currency-select:focus-visible {
+    outline:2px solid var(--green);
+    outline-offset:2px
+}
 .refresh-button {
     display:inline-flex;
     align-items:center;
@@ -251,6 +266,9 @@ button:disabled {
     border-radius:8px;
     background:#0d1511;
     color:#8ca196
+}
+.search-box:focus-within {
+    border-color:rgba(105,227,160,.5)
 }
 .search-box>span {
     font-size:21px;
@@ -509,17 +527,23 @@ th:first-child,td:first-child {
         gap:10px
     }
     .brand {
-        font-size:16px;
-        gap:8px
+        font-size:14px;
+        gap:6px
     }
     .brand-mark {
-        width:31px;
-        height:31px
+        width:27px;
+        height:27px;
+        border-radius:8px;
+        font-size:16px
     }
     .main-nav {
-        gap:15px;
+        gap:8px;
         margin:0 0 0 auto;
-        font-size:11px
+        font-size:10px
+    }
+    .currency-select {
+        padding:8px 2px;
+        font-size:10px
     }
     .refresh-button {
         padding:9px;
